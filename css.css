@@ -1,0 +1,250 @@
+
+body{
+    background-image:linear-gradient(90deg,black ,violet);
+}
+
+/* ---------------------logo-Container----------------------- */
+#logo-container{
+    height:18vh;
+    display: block;
+    width: 100%;
+
+    margin-bottom: 1rem;
+    
+
+}
+/* ------------------------logo image------------------------ */
+#img{
+    padding:2rem;
+    height:5rem;
+
+}
+/* --------------Search and Fevarouite Div------------------ */
+#search-fev{
+    display:flex;
+    height:20vh;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg , black , violet);
+    width:100vw;
+    color:white;
+    font-size:large;
+    /* overflow:hidden */
+
+}
+/* -------------------Search and Search List------------------ */
+#serch-element{
+    margin:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
+    position: relative;
+   
+}
+/* --------------------------------Search Icon------------------ */
+#search-icon{
+    height:1.5rem;
+    position:absolute;
+    margin-left:-2rem;
+    margin-top:1rem;
+   
+}
+/* --------------------------Search Input Element----------------- */
+#search-input{
+    height:3rem;
+    width: 70vw;
+    border-radius: 10px;
+}
+/* -------------------------------------Search List Container------------------ */
+#search-list{
+    position:absolute;
+    right:-1;
+    top:100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    z-index: 5;
+    width: 69vw;
+    background-color: #171720;
+    padding:0.5rem;
+    /* display: none; */
+}
+/* -----------------------------------Search List Container----------------- */
+
+.list-item{
+    padding:0.5rem;
+    width:98%;
+    cursor:pointer;
+    transition: all 200ms linear;
+    display:flex;
+    align-items: center;
+}
+
+#list-item:hover {
+    background-color: yellowgreen;
+    color:black
+}
+#item-thumb img{
+    width:80px;
+    margin-right:0.8rem;
+}
+#item-info h3{
+    font-weight: 700;
+    font-size: 1rem;
+}
+#item-info p{
+    font-weight: 600;
+    font-size: 0.7rem;
+    margin-top:0.5rem;
+}
+#like-icon{
+    height :2rem;
+
+}
+
+/* CLASS TO HIDE SEARCH-LIST */
+.search-list-hide{
+    display: none !important;
+}
+/* ------------------My Favourite Section------------------ */
+#my-favourite{
+    height:100%;
+    width:25vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    cursor: pointer;
+}
+/* ---------------------Movies Search Result --------------------*/
+#result-ctn{
+    padding:2rem 0;
+    color:white;
+    display:flex;
+    flex-direction: column;
+}
+#result-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.movie-poster img{
+    max-width: 30vw;
+    margin:0 auto;
+    border:4px solid white;
+    /* display: flex; */
+}
+.movie-info{
+    text-align: center;
+    padding-top:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.movie-title{
+    font-size: 2rem;
+    color: yellow;
+}
+.movie-misc-info{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding:1rem;
+    
+}
+.movie-info .year{
+    font-weight: 500;
+}
+.movie-info .rated{
+    background-color: yellow;
+    padding: 0.4rem;
+    margin: 0 0.4rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.movie-info .released{
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+.movie-info .writer{
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.movie-info .genre{
+    background-color:#292929;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+.movie-info .plot{
+    max-width: 400px;
+    margin: 1rem auto;
+}
+.movie-info .language{
+    color: yellow;
+    font-style: italic;
+}
+.movie-info .awards{
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+.movie-info .awards i{
+    color:yellow;
+    margin: 1rem 0.7rem 0 0;
+}
+/* --------------------------------------------------------------------Media Tags-------------------------------------------- */
+
+@media screen and (max-width: 450px){
+    
+    .search-element #search-input{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+    .search-element h3{
+        font-size: 1.4rem;
+    }
+    #search-list{
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    #search-list #list-item{
+        width: 100%;
+    }
+    .movie-misc-info{
+        flex-direction: column;
+    }
+    .movie-misc-info li:nth-child(2){
+        margin: 0.8rem 0;
+    }
+}
+
+@media(min-width: 750px){
+    .search-element{
+        flex-direction: row;
+    }
+    .search-element h3{
+        margin-bottom: 0;
+    }
+    #result-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .movie-info{
+        text-align: left;
+        padding-top: 0;
+    }
+    .movie-info .movie-misc-info{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    
+    .movie-info .writer{
+        padding-left: 0;
+        margin-left: 0;
+    }
+}

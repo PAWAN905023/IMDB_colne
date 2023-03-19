@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>IMDB CLONE</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id = logo-container>
+            <img id = "img" src="src/IMDB.png" alt="IMDB CLONE">
+    </div>
+    <!-- SEARCH AND FEV  -->
+    <div id="search-fev">
+        <!-- SEARCH STARTS -->
+        <div id = "serch-element">
+            <div>
+                
+                <span>Search Movies:</span><input type="text" placeholder="Search Movie Here" onkeyup = searchMovies() class = "search-input" id = "search-input">
+                <img id = "search-icon" src="src/search.png" alt="">
+                <div id="search-list" class = "search-list-hide">
+                    <!-- here list item will be append -->
+                </div>
+
+
+            </div>
+            
+        </div>
+        <!-- SEARCH ENDS -->
+        <!-- FEV STARTS -->
+        <div id = "my-favourite">My favourite</div>
+        <!-- FEV ENDS -->
+    </div>
+    <!-- SEARCH-FEV ENDS -->
+
+    <!-- RESULT CONTAINER STARTS HERE -->
+    <div id="ctn">
+        <div id="result-ctn">
+            <!-- RESULT GRID STARTS HERE -->
+
+            <div id = "result-grid">
+                <!-- movie information here  -->
+                 <!-- here result item will be append -->
+            </div>
+            <!-- Movie Infontmation ends here -->
+        </div>
+        <!-- End of Movies Result Container -->
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
