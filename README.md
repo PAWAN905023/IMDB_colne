@@ -1,2 +1,2 @@
 # Imdb-clone
-HOSTED LINK :
+HOSTED LINK :https://pawan905023.github.io/IMDB_colne/
